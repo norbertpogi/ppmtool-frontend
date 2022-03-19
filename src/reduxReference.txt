@@ -19,3 +19,8 @@ npm i axios
   
 redux setup2_continue working on redux setup
  https://github.com/AgileIntelligence/AgileIntPPMTool/tree/branch19
+
+ get validation from redux
+ reference:
+ https://github.com/AgileIntelligence/AgileIntPPMTool/tree/branch20
+ 

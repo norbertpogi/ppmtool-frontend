@@ -10,17 +10,25 @@ class AddProject extends Component {
     constructor() {
         super()
         this.state = {
-            "projectName": "",
-            "projectIdentifier": "",
-            "description": "",
-            "start_date": "",
-            "end_date": ""
+            projectName: "",
+            projectIdentifier: "",
+            description: "",
+            start_date: "",
+            end_date: "",
+            errors: {}
         }
         this.onChange = this.onChange.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
     }
     onChange(e) {
         this.setState({ [e.target.name]: e.target.value });
+    }
+    //lifecyclehook
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.errors) {
+            this.setState({ errors: nextProps.errors })
+        }
+
     }
     onSubmit(e) {
         e.preventDefault();
@@ -35,18 +43,9 @@ class AddProject extends Component {
         this.props.createProject(newProject, this.props.history);
     }
     render() {
+        const { errors } = this.state;
         return (
             <div className="project">
-                {
-                    //check name attribute input fields
-                    //create constructor
-                    //set state
-                    //set value on input fields
-                    //create onChange function
-                    //set onChange on each input field
-                    //bind on constructor
-                    //check state change in the react extension
-                }
                 <div className="container">
                     <div className="row">
                         <div className="col-md-8 m-auto">
@@ -57,15 +56,18 @@ class AddProject extends Component {
                                     <input type="text" className="form-control form-control-lg " placeholder="Project Name"
                                         name='projectName' value={this.state.projectName}
                                         onChange={this.onChange} />
+                                    <p>{errors.projectName}</p>
                                 </div>
                                 <div className="form-group">
                                     <input type="text" className="form-control form-control-lg" placeholder="Unique Project ID"
                                         name='projectIdentifier' value={this.state.projectIdentifier}
                                         onChange={this.onChange} />
+                                    <p>{errors.projectIdentifier}</p>
                                 </div>
                                 <div className="form-group">
                                     <textarea className="form-control form-control-lg" placeholder="Project Description" name='description'
                                         onChange={this.onChange} />
+                                    <p>{errors.description}</p>
                                 </div>
                                 <h6>Start Date</h6>
                                 <div className="form-group">
@@ -87,6 +89,10 @@ class AddProject extends Component {
     }
 }
 AddProject.propTypes = {
-    createProject: PropTypes.func.isRequired
+    createProject: PropTypes.func.isRequired,
+    errors: PropTypes.object.isRequired
 }
-export default connect(null, { createProject })(AddProject);
+const mapToStateProps = state => ({
+    errors: state.errors
+});
+export default connect(mapToStateProps, { createProject })(AddProject);
