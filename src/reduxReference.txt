@@ -24,3 +24,7 @@ redux setup2_continue working on redux setup
  reference:
  https://github.com/AgileIntelligence/AgileIntPPMTool/tree/branch20
  
+ working on styling validation
+ 1. npm i classnames //this will enable the dynamic validation error
+ https://github.com/AgileIntelligence/AgileIntPPMTool/tree/branch21
+  dependencies looklike : "classnames": "^2.2.6",
