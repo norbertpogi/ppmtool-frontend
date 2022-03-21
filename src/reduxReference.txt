@@ -33,3 +33,7 @@ redux setup2_continue working on redux setup
   https://github.com/AgileIntelligence/AgileIntPPMTool/tree/branch22
   get project has to display in the redux state will be working on displaying 
   the record on next
+
+  WIP on getProjects via redux working on testing the props
+  will do the final step in the next commit
+

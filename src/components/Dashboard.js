@@ -11,6 +11,18 @@ class Dashboard extends Component {
         this.props.getProjects()
     }
     render() {
+        //for testing only
+        // const projectObject = {
+        //     projectName: "Project name Props",
+        //     projectIdentifier: "Project id props",
+        //     description: "description props",
+        //     start_date: "start_date props",
+        //     end_date: "end_date props"
+        // }
+
+        //verify this in redux state on how the props aranges
+        //const projectObject = this.props.project.projects;  old way
+        const { projects } = this.props.project; //better way es6
         return (
             <div className="projects">
                 <div className="container">
@@ -21,7 +33,7 @@ class Dashboard extends Component {
                             <CreateProjectButton />
                             <br />
                             <hr />
-                            <ProjectItem />
+                            <ProjectItem project={projects} />
                         </div>
                     </div>
                 </div>
