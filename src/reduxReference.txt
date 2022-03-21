@@ -40,3 +40,6 @@ redux setup2_continue working on redux setup
   final step on getRetrieveProjects via redux and props
   https://github.com/AgileIntelligence/AgileIntPPMTool/tree/branch23
 
+  WIP on updating the project
+  https://github.com/AgileIntelligence/AgileIntPPMTool/tree/branch24
+
