@@ -5,6 +5,7 @@ import React, { Component } from 'react'
 import PropTypes from "prop-types";
 import { connect } from 'react-redux';
 import { createProject } from "../../actions/projectActions";
+
 import classNames from 'classnames';
 
 class AddProject extends Component {
@@ -34,11 +35,11 @@ class AddProject extends Component {
     onSubmit(e) {
         e.preventDefault();
         const newProject = {
-            "projectName": this.state.projectName,
-            "projectIdentifier": this.state.projectIdentifier,
-            "description": this.state.description,
-            "start_date": this.state.start_date,
-            "end_date": this.state.end_date
+            projectName: this.state.projectName,
+            projectIdentifier: this.state.projectIdentifier,
+            description: this.state.description,
+            start_date: this.state.start_date,
+            end_date: this.state.end_date
         };
         console.log(newProject);
         this.props.createProject(newProject, this.props.history);

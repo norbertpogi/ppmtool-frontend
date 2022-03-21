@@ -5,10 +5,11 @@ import rootReducer from "./reducers";
 const initialState = {};
 const middleware = [thunk];
 
-let store;
+let store = window.navigator.userAgent.includes("Chrome")
+    ? getChromeStore() : getDefaultStore();
 
-if (window.navigator.userAgent.includes("Chrome")) {
-    store = createStore(
+function getChromeStore() {
+    return createStore(
         rootReducer,
         initialState,
         compose(
@@ -17,8 +18,10 @@ if (window.navigator.userAgent.includes("Chrome")) {
             window.__REDUX_DEVTOOLS_EXTENSION__()
         )
     );
-} else {
-    store = createStore(rootReducer, initialState,
+};
+
+function getDefaultStore() {
+    return createStore(rootReducer, initialState,
         compose(applyMiddleware(...middleware))
     );
 }

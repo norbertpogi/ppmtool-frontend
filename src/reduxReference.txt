@@ -28,3 +28,8 @@ redux setup2_continue working on redux setup
  1. npm i classnames //this will enable the dynamic validation error
  https://github.com/AgileIntelligence/AgileIntPPMTool/tree/branch21
   dependencies looklike : "classnames": "^2.2.6",
+
+  workin on getProjects via redux only
+  https://github.com/AgileIntelligence/AgileIntPPMTool/tree/branch22
+  get project has to display in the redux state will be working on displaying 
+  the record on next
