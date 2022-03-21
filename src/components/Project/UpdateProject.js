@@ -1,8 +1,16 @@
 import React, { Component } from 'react'
+import PropTypes from "prop-types";
+import { connect } from 'react-redux';
+import classNames from 'classnames';
+import { getProject } from "../../actions/projectActions";
 
 class UpdateProject extends Component {
-    render() {
 
+    componentDidMount() {
+        const { projectId } = this.props.match.params;
+        this.props.getProject(projectId, this.props.history);
+    }
+    render() {
         return (
             <div className="project">
                 <div className="container">
@@ -12,7 +20,7 @@ class UpdateProject extends Component {
                             <hr />
                             <form>
                                 <div className="form-group">
-                                    <input type="text" className="form-control form-control-lg " placeholder="Project Name" />
+                                    <input type="text" className="form-control form-control-lg " placeholder="" />
                                 </div>
                                 <div className="form-group">
                                     <input type="text" className="form-control form-control-lg" placeholder="Unique Project ID"
@@ -40,4 +48,11 @@ class UpdateProject extends Component {
         )
     }
 }
-export default UpdateProject;
+UpdateProject.propTypes = {
+    getProject: PropTypes.func.isRequired,
+    project: PropTypes.object.isRequired
+};
+const mapToStateProps = state => ({
+    project: state.project.project
+});
+export default connect(mapToStateProps, { getProject })(UpdateProject);
