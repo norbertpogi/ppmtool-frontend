@@ -36,4 +36,7 @@ redux setup2_continue working on redux setup
 
   WIP on getProjects via redux working on testing the props
   will do the final step in the next commit
+  
+  final step on getRetrieveProjects via redux and props
+  https://github.com/AgileIntelligence/AgileIntPPMTool/tree/branch23
 

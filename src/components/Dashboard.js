@@ -33,7 +33,12 @@ class Dashboard extends Component {
                             <CreateProjectButton />
                             <br />
                             <hr />
-                            <ProjectItem project={projects} />
+                            {
+                                // we can map this since this is a list
+                                projects.map(pr => (
+                                    <ProjectItem key={pr.id} project={pr} />
+                                ))
+                            }
                         </div>
                     </div>
                 </div>
