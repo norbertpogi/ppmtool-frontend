@@ -23,10 +23,14 @@ export const getProjects = () => async dispatch => {
     });
 }
 export const getProject = (id, history) => async dispatch => {
-    const resData = await axios.get(API_URL + `/${id}`);
-    dispatch({
-        type: GET_PROJECT,
-        payload: resData.data
-    });
+    try {
+        const resData = await axios.get(API_URL + `/${id}`);
+        dispatch({
+            type: GET_PROJECT,
+            payload: resData.data
+        });
+    } catch (error) {
+        history.push("/dashboard");
+    }
 
 }
