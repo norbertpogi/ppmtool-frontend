@@ -45,3 +45,6 @@ redux setup2_continue working on redux setup
 
 WIP on update project to state
 https://github.com/AgileIntelligence/AgileIntPPMTool/commit/b13741fcff1e23f67355623d7c9ef7db8f855dd8
+
+final updated project by id
+https://github.com/AgileIntelligence/AgileIntPPMTool/tree/branch26

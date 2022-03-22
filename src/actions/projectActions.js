@@ -22,8 +22,8 @@ export const getProjects = () => async dispatch => {
         payload: resData.data
     });
 }
-export const getProject = (projectId, history) => async dispatch => {
-    const resData = await axios.get(API_URL + `/${projectId}`);
+export const getProject = (id, history) => async dispatch => {
+    const resData = await axios.get(API_URL + `/${id}`);
     dispatch({
         type: GET_PROJECT,
         payload: resData.data
