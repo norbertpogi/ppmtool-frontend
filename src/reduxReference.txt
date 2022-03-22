@@ -48,3 +48,7 @@ https://github.com/AgileIntelligence/AgileIntPPMTool/commit/b13741fcff1e23f67355
 
 final updated project by id
 https://github.com/AgileIntelligence/AgileIntPPMTool/tree/branch26
+
+handle errors in updating project by id
+next will be working on to handle projectId not exist
+
