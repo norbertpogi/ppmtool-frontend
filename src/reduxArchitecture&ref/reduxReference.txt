@@ -61,3 +61,6 @@ https://github.com/AgileIntelligence/AgileIntPPMTool/tree/branch28
 
 delete existing project
 https://github.com/AgileIntelligence/AgileIntPPMTool/tree/branch29
+
+refactoring some mess and add temporary validation in delete function
+https://github.com/AgileIntelligence/AgileIntPPMTool/tree/branch30

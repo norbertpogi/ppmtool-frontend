@@ -1,11 +1,9 @@
 import axios from "axios";
 import { DELETE_PROJECT, GET_ERRORS, GET_PROJECT, GET_PROJECTS } from "./types";
 
-const API_URL = "http://localhost:8080/api/project";
-
 export const createProject = (project, history) => async dispatch => {
     try {
-        await axios.post(API_URL, project);
+        await axios.post("/", project);
         history.push("/dashboard");
         dispatch({
             type: GET_ERRORS,
@@ -20,7 +18,7 @@ export const createProject = (project, history) => async dispatch => {
 }
 
 export const getProjects = () => async dispatch => {
-    const resData = await axios.get(API_URL + "/all");
+    const resData = await axios.get("/all");
     dispatch({
         type: GET_PROJECTS,
         payload: resData.data
@@ -28,7 +26,7 @@ export const getProjects = () => async dispatch => {
 }
 export const getProject = (id, history) => async dispatch => {
     try {
-        const resData = await axios.get(API_URL + `/${id}`);
+        const resData = await axios.get(`/${id}`);
         dispatch({
             type: GET_PROJECT,
             payload: resData.data
@@ -39,10 +37,12 @@ export const getProject = (id, history) => async dispatch => {
 
 }
 export const deleteProject = (id) => async dispatch => {
-    await axios.delete(API_URL + `/${id}`);
-    dispatch({
-        type: DELETE_PROJECT,
-        payload: id
-    });
+    if (window.confirm("Are you sure to delete this project?")) {
+        await axios.delete(`/${id}`);
+        dispatch({
+            type: DELETE_PROJECT,
+            payload: id
+        });
+    }
 
 }
