@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import PropTypes from "prop-types";
 import { connect } from 'react-redux';
 import { addProjectTask } from '../../../actions/backlogActions';
+import classNames from 'classnames';
 
 class AddProjectTask extends Component {
     constructor(props) {
@@ -37,13 +38,14 @@ class AddProjectTask extends Component {
     }
     //lifecyclehook
     componentWillReceiveProps(nextProps) {
-        // if (nextProps.errors) {
-        //     this.setState({ errors: nextProps.errors })
-        // }
+        if (nextProps.errors) {
+            this.setState({ errors: nextProps.errors })
+        }
 
     }
 
     render() {
+        const { errors } = this.state;
         const { id } = this.props.match.params;
         return (
             <div className="add-PBI">
@@ -57,11 +59,12 @@ class AddProjectTask extends Component {
                             <p className="lead text-center">Project Name + Project Code</p>
                             <form onSubmit={this.onSubmit}>
                                 <div className="form-group">
-                                    <input type="text" className="form-control form-control-lg"
+                                    <input type="text" className={classNames("form-control form-control-lg", { "is-invalid": errors.summary })}
                                         name='summary'
                                         value={this.state.summary}
                                         placeholder="Project Task summary"
                                         onChange={this.onChange} />
+                                    {errors.summary && (<div className='invalid-feedback'>{errors.summary}</div>)}
                                 </div>
                                 <div className="form-group">
                                     <textarea className="form-control form-control-lg"
