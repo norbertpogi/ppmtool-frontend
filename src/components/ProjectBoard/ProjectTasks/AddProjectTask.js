@@ -33,7 +33,6 @@ class AddProjectTask extends Component {
             priority: this.state.priority,
             status: this.state.status
         };
-        console.log(newProjectTask);
         this.props.addProjectTask(this.state.projectIdentifier, newProjectTask, this.props.history);
     }
     //lifecyclehook

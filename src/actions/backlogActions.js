@@ -4,7 +4,7 @@ import { DELETE_PROJECT_TASK, GET_BACKLOG, GET_ERRORS, GET_PROJECT_TASK } from "
 export const addProjectTask = (backlog_id, project_task, history) => async dispatch => {
     try {
         await axios.post(`/backlog/${backlog_id}`, project_task);
-        history.push("/projectBoard");
+        history.push(`/projectBoard/${backlog_id}`);
         dispatch({
             type: GET_ERRORS,
             payload: {}
