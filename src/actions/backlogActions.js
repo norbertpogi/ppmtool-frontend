@@ -24,7 +24,7 @@ export const getBackLog = (backlog_id, history) => async dispatch => {
             payload: resData.data
         });
     } catch (error) {
-        //history.push(`/projectBoard/${backlog_id}`);
+        history.push(`/projectBoard/${backlog_id}`);
     }
 
 }

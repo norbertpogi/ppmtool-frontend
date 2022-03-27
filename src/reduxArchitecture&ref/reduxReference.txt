@@ -80,3 +80,7 @@ working on projectBoard Backlog
 
 load projectTask to the state
 branch 50
+
+load projectTask to UI
+https://agileintppmtool.herokuapp.com/projectBoard/E001
+https://github.com/AgileIntelligence/AgileIntPPMTool/blob/branch51/ppmtool-react-client/src/components/ProjectBoard/Backlog.js
