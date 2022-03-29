@@ -87,3 +87,8 @@ https://github.com/AgileIntelligence/AgileIntPPMTool/blob/branch51/ppmtool-react
 
 work with organized projectTask with colorcode and priority
 https://github.com/AgileIntelligence/AgileIntPPMTool/tree/branch52
+
+working on backlog projectBoard validation if not exist
+with error "No Project Tasks on this board"
+https://agileintppmtool.herokuapp.com/projectBoard/E001sd
+https://github.com/AgileIntelligence/AgileIntPPMTool/tree/branch53
