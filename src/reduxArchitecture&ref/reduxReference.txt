@@ -96,3 +96,9 @@ https://github.com/AgileIntelligence/AgileIntPPMTool/tree/branch53
 added router link to updateProjectTask
 added updateProjectTask UI
 added router Link back to ProjectBaord
+
+loaded getProjectTask in redux state
+https://github.com/AgileIntelligence/AgileIntPPMTool/tree/branch54 to 56
+
+added updatedProjectTask via api call
+https://github.com/AgileIntelligence/AgileIntPPMTool/tree/branch54 to 56
