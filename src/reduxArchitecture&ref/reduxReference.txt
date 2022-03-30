@@ -102,3 +102,6 @@ https://github.com/AgileIntelligence/AgileIntPPMTool/tree/branch54 to 56
 
 added updatedProjectTask via api call
 https://github.com/AgileIntelligence/AgileIntPPMTool/tree/branch54 to 56
+
+implement error validation in updatingProjectTask
+https://github.com/AgileIntelligence/AgileIntPPMTool/tree/branch54 to 56
