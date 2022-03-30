@@ -92,3 +92,7 @@ working on backlog projectBoard validation if not exist
 with error "No Project Tasks on this board"
 https://agileintppmtool.herokuapp.com/projectBoard/E001sd
 https://github.com/AgileIntelligence/AgileIntPPMTool/tree/branch53
+
+added router link to updateProjectTask
+added updateProjectTask UI
+added router Link back to ProjectBaord
