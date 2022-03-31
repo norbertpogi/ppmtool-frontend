@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 import classNames from "classnames";
 import {
   getProjectTask,
-  updateProjectTask,
+  updateProjectTask,cleanErrorProjectTask
 } from "../../../actions/backlogActions";
 
 class UpdateProjectTask extends Component {
@@ -57,10 +57,9 @@ class UpdateProjectTask extends Component {
   }
   onChange(e) {
     this.setState({ [e.target.name]: e.target.value });
+    this.setState({ errors: {} });
   }
   onSubmit(e) {
-    e.preventDefault();
-
     const UpdateProjectTask = {
       id: this.state.id,
       projectSequence: this.state.projectSequence,
@@ -79,12 +78,19 @@ class UpdateProjectTask extends Component {
       UpdateProjectTask,
       this.props.history
     );
+    
+   e.preventDefault();
+  // this.props.cleanErrorProjectTask();
+
   }
 
   componentDidMount() {
     const { id, pt_id } = this.props.match.params;
     this.props.getProjectTask(id, pt_id, this.props.history);
   }
+  componentWillUnmount() {
+    this.props.cleanErrorProjectTask();
+}
 
   render() {
     const { errors } = this.state;
@@ -94,7 +100,7 @@ class UpdateProjectTask extends Component {
           <div className="row">
             <div className="col-md-8 m-auto">
               <Link to={`/projectBoard/${this.state.projectIdentifier}`} className="btn btn-light">
-                Back to Project Board
+              Back to Project Board
               </Link>
               <h4 className="display-4 text-center">Update Project Task</h4>
               <p className="lead text-center">
@@ -184,6 +190,6 @@ const mapStateToProps = (state) => ({
   project_task: state.backlog.project_task,
   errors: state.errors
 });
-export default connect(mapStateToProps, { getProjectTask, updateProjectTask })(
+export default connect(mapStateToProps, { getProjectTask, updateProjectTask,cleanErrorProjectTask})(
   UpdateProjectTask
 );
