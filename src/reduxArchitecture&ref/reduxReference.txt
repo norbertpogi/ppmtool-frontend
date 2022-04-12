@@ -112,3 +112,7 @@ implemented deleteFunction for projectTask
 
 setup user management and route (register login)
 https://github.com/AgileIntelligence/AgileIntPPMTool/tree/branch72
+
+added userRegistration and validation via api call
+https://github.com/AgileIntelligence/AgileIntPPMTool/tree/branch74
+
