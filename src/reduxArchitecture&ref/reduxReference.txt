@@ -133,3 +133,6 @@ handle routing for expired token part2
 
 handle dynamic header
 branch 79
+
+lock public route when login
+branch 80
