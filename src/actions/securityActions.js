@@ -9,7 +9,7 @@ export const createNewUser = (newUser, history) => async (dispatch) => {
     history.push(`/login`);
     dispatch({
       type: GET_ERRORS,
-      payload: {},
+      payload: {}
     });
   } catch (error) {
     dispatch({
@@ -29,7 +29,7 @@ export const login = (LoginRequest) => async (dispatch) => {
     
     dispatch({ // dispatch to our securityReducer
       type: SET_CURRENT_USER,
-      payload: decoded,
+      payload: decoded
     });
   } catch (error) {
     dispatch({

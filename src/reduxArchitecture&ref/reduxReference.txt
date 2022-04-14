@@ -136,3 +136,6 @@ branch 79
 
 lock public route when login
 branch 80
+
+securedRoute
+branch 81
