@@ -125,4 +125,6 @@ https://github.com/AgileIntelligence/AgileIntPPMTool/tree/branch76
 
 added validation in login user
 added redirect to dashboard upon successfull login
+
+fix retain user goes away upon refresh part1
 branch 77
