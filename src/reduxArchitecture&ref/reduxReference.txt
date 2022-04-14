@@ -130,3 +130,6 @@ fix retain user goes away upon refresh part1
 branch 77
 
 handle routing for expired token part2
+
+handle dynamic header
+branch 79
