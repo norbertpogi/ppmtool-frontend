@@ -116,3 +116,5 @@ https://github.com/AgileIntelligence/AgileIntPPMTool/tree/branch72
 added userRegistration and validation via api call
 https://github.com/AgileIntelligence/AgileIntPPMTool/tree/branch74
 
+work with usersLogin security
+1. npm install jwt-decode@2.2.0
