@@ -139,3 +139,10 @@ branch 80
 
 securedRoute
 branch 81
+
+bugs need to fix
+1. not showing the right error in frontend from backend (this can be fix in projectBoard.js)
+  referencce:
+    https://github.com/AgileIntelligence/AgileIntPPMTool/commit/8c3fefb8058dea4fb95f7d3ad0f0c5bb1a788ca3
+2. login user can also view other projectTask when directly going to URL 
+3. project not working when redux extension disabled (done fix made in store.js)
